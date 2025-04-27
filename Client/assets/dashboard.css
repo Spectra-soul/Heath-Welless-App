@@ -1,0 +1,383 @@
+/* Enhanced Dashboard Styles for Health & Wellness Website */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+/* Import Font Awesome for icons */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+
+:root {
+    /* Dashboard-specific variables */
+    --dashboard-gradient: linear-gradient(135deg, rgba(76, 175, 80, 0.05), rgba(33, 150, 243, 0.05));
+    --card-hover-transform: translateY(-8px) scale(1.02);
+    --animation-timing: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --input-focus-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);
+    --checkbox-size: 18px;
+    --tab-indicator-height: 3px;
+    --feature-card-bg: rgba(255, 255, 255, 0.8);
+}
+
+/* Dashboard Section Styling */
+.dashboard-section {
+    padding: 5rem 0;
+    background-image: 
+        url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%234CAF50' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"),
+        radial-gradient(circle at 10% 20%, rgba(76, 175, 80, 0.05) 0%, transparent 25%),
+        radial-gradient(circle at 90% 80%, rgba(33, 150, 243, 0.05) 0%, transparent 25%);
+    background-attachment: fixed;
+    position: relative;
+    overflow: hidden;
+}
+
+.dashboard-section::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(76, 175, 80, 0.1) 0%, transparent 70%);
+    animation: float 15s infinite alternate var(--animation-timing);
+}
+
+.dashboard-section::after {
+    content: '';
+    position: absolute;
+    bottom: -50px;
+    left: -50px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(33, 150, 243, 0.1) 0%, transparent 70%);
+    animation: float 15s infinite alternate-reverse var(--animation-timing);
+}
+
+/* Page Banner Styling */
+.page-banner {
+    background: var(--gradient-primary);
+    padding: 8rem 0 4rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.page-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23FFFFFF' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    opacity: 0.3;
+}
+
+.banner-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-lg);
+    animation: fadeIn 1.2s var(--animation-timing);
+}
+
+.banner-content h2 {
+    color: white;
+    font-size: var(--font-size-3xl);
+    margin-bottom: var(--spacing-md);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.banner-content p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: var(--font-size-lg);
+    max-width: 600px;
+    margin: 0 auto;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Dashboard Tabs Styling */
+.dashboard-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2.5rem;
+    position: relative;
+}
+
+.tab-btn {
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border: none;
+    background: none;
+    color: var(--text-light);
+    cursor: pointer;
+    border-bottom: var(--tab-indicator-height) solid transparent;
+    transition: all 0.4s var(--animation-timing);
+    position: relative;
+    overflow: hidden;
+    font-family: var(--font-primary);
+}
+
+.tab-btn::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: var(--tab-indicator-height);
+    background: var(--gradient-primary);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s var(--animation-timing);
+    border-radius: var(--tab-indicator-height);
+}
+
+.tab-btn.active {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.tab-btn.active::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.tab-btn:hover:not(.active) {
+    color: var(--primary-dark);
+}
+
+.tab-btn:hover:not(.active)::before {
+    transform: scaleX(0.3);
+}
+
+/* Tab Content Styling with Glass Effect */
+.tab-content {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 2.5rem;
+    background: rgba(255, 255, 255, 0.85);
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--glass-shadow);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--glass-border);
+    position: relative;
+    z-index: 10;
+    transition: transform 0.5s var(--animation-timing), box-shadow 0.5s var(--animation-timing);
+}
+
+.tab-content:hover {
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.tab-pane {
+    display: none;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s var(--animation-timing), transform 0.5s var(--animation-timing);
+}
+
+.tab-pane.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.tab-pane h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: var(--primary-dark);
+    font-weight: 600;
+}
+
+/* Enhanced Form Styling */
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+}
+
+.form-group {
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.6rem;
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: var(--font-size-md);
+    transition: color 0.3s ease;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.9rem 1rem;
+    border: 2px solid #e0e0e0;
+    border-radius: var(--border-radius);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.8);
+    font-family: var(--font-primary);
+}
+
+.form-group input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: var(--input-focus-shadow);
+    background-color: white;
+}
+
+.form-group:focus-within label {
+    color: var(--primary-color);
+}
+
+/* Custom Checkbox Styling */
+.form-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    cursor: pointer;
+}
+
+.form-checkbox input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: var(--checkbox-size);
+    height: var(--checkbox-size);
+    border: 2px solid #e0e0e0;
+    border-radius: var(--border-radius-sm);
+    background-color: white;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.form-checkbox input[type="checkbox"]:checked {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.form-checkbox input[type="checkbox"]:checked::before {
+    content: '\2713';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 12px;
+}
+
+.form-checkbox input[type="checkbox"]:focus {
+    box-shadow: var(--input-focus-shadow);
+    outline: none;
+}
+
+.form-checkbox label {
+    font-size: var(--font-size-sm);
+    color: var(--text-light);
+    cursor: pointer;
+}
+
+.form-checkbox a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.form-checkbox a:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
+}
+
+.form-hint {
+    display: block;
+    margin-top: 0.5rem;
+    color: var(--text-light);
+    font-size: var(--font-size-xs);
+    line-height: 1.5;
+}
+
+/* Enhanced Button Styling */
+.btn-full {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    border-radius: var(--border-radius);
+    background: var(--gradient-primary);
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s var(--animation-timing);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.3);
+}
+
+.btn-full::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: all 0.6s ease;
+}
+
+.btn-full:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(76, 175, 80, 0.4);
+}
+
+.btn-full:hover::after {
+    left: 100%;
+}
+
+.btn-full:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 10px rgba(76, 175, 80, 0.3);
+}
+
+.form-footer {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.forgot-password {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: var(--font-size-sm);
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+}
+
+.forgot-password::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
+.forgot-password:hover {
+    color: var(--primary-dark);
+}
+
+.forgot-password:hover::after {
+    width: 100%;
+}
+
+/* Dashboard Features Section */
+.dashboard-features {
+    padding: 5rem 0;

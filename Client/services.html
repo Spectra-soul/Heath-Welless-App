@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health & Wellness - Services</title>
+    <link rel="stylesheet" href="assets/services.css">
+    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="/images/logo.jpg" alt="Health & Wellness Logo"></a>
+            <h1>Health & Wellness</h1>
+        </div>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html" class="active">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="dashboard.html" class="btn-primary">Dashboard</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="page-banner">
+        <div class="banner-content">
+            <h2>Our Services</h2>
+            <p>Discover our comprehensive range of wellness programs and services.</p>
+        </div>
+    </section>
+
+    <section class="services-intro">
+        <div class="container">
+            <p class="section-intro">At Health & Wellness, we offer a variety of services designed to support your physical, mental, and emotional wellbeing. Our programs are tailored to meet your individual needs and goals.</p>
+        </div>
+    </section>
+
+    <section id="yoga" class="service-category">
+        <div class="container">
+            <div class="service-header">
+                <h2>Yoga & Meditation</h2>
+                <p>Find balance and inner peace with our expert-led sessions.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <img src="images/yoga-class.jpg" alt="Group Yoga Class">
+                    <h3>Group Yoga Classes</h3>
+                    <p>Join our community in guided yoga sessions for all experience levels.</p>
+                    <ul class="service-details">
+                        <li>60-90 minute sessions</li>
+                        <li>Multiple styles available</li>
+                        <li>Beginner to advanced levels</li>
+                    </ul>
+                    <p class="price">From $15 per class</p>
+                    <button class="btn-secondary book-now" data-name="Group Yoga Class" data-price="15">Book Now</button>
+                </div>
+                <div class="service-card">
+                    <img src="images/private-yoga.jpg" alt="Private Yoga Session">
+                    <h3>Private Yoga Sessions</h3>
+                    <p>Personalized one-on-one instruction tailored to your specific needs.</p>
+                    <ul class="service-details">
+                        <li>60 minute sessions</li>
+                        <li>Customized practice</li>
+                        <li>Flexible scheduling</li>
+                    </ul>
+                    <p class="price">$75 per session</p>
+                    <button class="btn-secondary book-now" data-name="Private Yoga Session" data-price="75">Book Now</button>
+                </div>
+                <div class="service-card">
+                    <img src="images/meditation.jpg" alt="Meditation Workshop">
+                    <h3>Meditation Workshops</h3>
+                    <p>Learn techniques to quiet the mind and develop mindfulness.</p>
+                    <ul class="service-details">
+                        <li>45 minute sessions</li>
+                        <li>Various meditation styles</li>
+                        <li>Stress reduction focus</li>
+                    </ul>
+                    <p class="price">$20 per workshop</p>
+                    <button class="btn-secondary book-now" data-name="Meditation Workshop" data-price="20">Book Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="nutrition" class="service-category">
+        <div class="container">
+            <div class="service-header">
+                <h2>Nutrition & Diet Planning</h2>
+                <p>Expert guidance for healthy eating and dietary management.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <img src="images/nutrition-consult.jpg" alt="Nutrition Consultation">
+                    <h3>Nutrition Consultation</h3>
+                    <p>Comprehensive assessment of your current diet and nutritional needs.</p>
+                    <ul class="service-details">
+                        <li>90 minute initial consultation</li>
+                        <li>Dietary analysis</li>
+                        <li>Health goal setting</li>
+                    </ul>
+                    <p class="price">$120 per session</p>
+                    <button class="btn-secondary book-now" data-name="Nutrition Consultation" data-price="120">Book Now</button>
+                </div>
+                <div class="service-card">
+                    <img src="images/meal-planning.jpg" alt="Meal Planning">
+                    <h3>Personalized Meal Plans</h3>
+                    <p>Custom meal plans designed to meet your nutritional needs and preferences.</p>
+                    <ul class="service-details">
+                        <li>Weekly or monthly plans</li>
+                        <li>Grocery shopping lists</li>
+                        <li>Recipe suggestions</li>
+                    </ul>
+                    <p class="price">From $80 per plan</p>
+                    <button class="btn-secondary book-now" data-name="Personalized Meal Plan" data-price="80">Book Now</button>
+                </div>
+                <div class="service-card">
+                    <img src="images/nutrition-workshop.jpg" alt="Nutrition Workshop">
+                    <h3>Nutrition Workshops</h3>
+                    <p>Group sessions focusing on specific nutrition topics and healthy cooking.</p>
+                    <ul class="service-details">
+                        <li>2 hour workshops</li>
+                        <li>Hands-on learning</li>
+                        <li>Take-home resources</li>
+                    </ul>
+                    <p class="price">$35 per workshop</p>
+                    <button class="btn-secondary book-now" data-name="Nutrition Workshop" data-price="35">Book Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="mental-health" class="service-category">
+        <div class="container">
+            <div class="service-header">
+                <h2>Mental Health Support</h2>
+                <p>Professional guidance for emotional and psychological wellbeing.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <img src="images/counseling.jpg" alt="Individual Counseling">
+                    <h3>Individual Counseling</h3>
+                    <p>One-on-one sessions with licensed mental health professionals.</p>
+                    <ul class="service-details">
+                        <li>50 minute sessions</li>
+                        <li>Confidential environment</li>
+                        <li>Various therapeutic approaches</li>
+                    </ul>
+                    <p class="price">$90 per session</p>
+                    <button class="btn-secondary book-now" data-name="Individual Counseling" data-price="90">Book Now</button>
+                </div>
+                <div class="service-card">
+                    <img src="images/stress-management.jpg" alt="Stress Management">
+                    <h3>Stress Management Program</h3>
+                    <p>Learn effective techniques to manage stress and anxiety.</p>
+                    <ul class="service-details">
+                        <li>6-week program</li>
+                        <li>Weekly group sessions</li>
+                        <li>Take-home exercises</li>
+                    </ul>
+                    <p class="price">$240 for full program</p>
+                    <button class="btn-secondary book-now" data-name="Stress Management Program" data-price="240">Book Now</button>
+                </div>
+                <div class="service-card">
+                    <img src="images/mindfulness.jpg" alt="Mindfulness Training">
+                    <h3>Mindfulness Training</h3>
+                    <p>Develop mindfulness skills to enhance mental clarity and emotional balance.</p>
+                    <ul class="service-details">
+                        <li>8-week program</li>
+                        <li>Weekly 60-minute sessions</li>
+                        <li>Daily practice guidance</li>
+                    </ul>
+                    <p class="price">$320 for full program</p>
+                    <button class="btn-secondary book-now" data-name="Mindfulness Training" data-price="320">Book Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="service-packages">
+        <div class="container">
+            <h2>Wellness Packages</h2>
+            <p class="section-intro">Save with our integrated wellness packages that combine multiple services.</p>
+            <div class="packages-grid">
+                <div class="package-card">
+                    <h3>Essential Wellness</h3>
+                    <p class="package-price">$299</p>
+                    <ul class="package-features">
+                        <li>Initial Nutrition Consultation</li>
+                        <li>4 Group Yoga Classes</li>
+                        <li>2 Meditation Workshops</li>
+                    </ul>
+                    <button class="btn-primary select-package" data-name="Essential Wellness Package" data-price="299">Select Package</button>
+                </div>
+                <div class="package-card featured">
+                    <div class="package-badge">Most Popular</div>
+                    <h3>Complete Wellness</h3>
+                    <p class="package-price">$499</p>
+                    <ul class="package-features">
+                        <li>Initial Nutrition Consultation</li>
+                        <li>Personalized Monthly Meal Plan</li>
+                        <li>8 Group Yoga Classes</li>
+                        <li>4 Meditation Workshops</li>
+                        <li>2 Individual Counseling Sessions</li>
+                    </ul>
+                    <button class="btn-primary select-package" data-name="Complete Wellness Package" data-price="499">Select Package</button>
+                </div>
+                <div class="package-card">
+                    <h3>Premium Wellness</h3>
+                    <p class="package-price">$799</p>
+                    <ul class="package-features">
+                        <li>Initial Nutrition Consultation</li>
+                        <li>Personalized Monthly Meal Plan</li>
+                        <li>4 Private Yoga Sessions</li>
+                        <li>8 Group Yoga Classes</li>
+                        <li>Full Stress Management Program</li>
+                        <li>4 Individual Counseling Sessions</li>
+                    </ul>
+                    <button class="btn-primary select-package" data-name="Premium Wellness Package" data-price="799">Select Package</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <h2>Ready to Start Your Wellness Journey?</h2>
+        <p>Join our community and get access to personalized wellness programs.</p>
+        <a href="dashboard.html" class="btn-primary">Sign Up Now</a>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>Health & Wellness</h2>
+                <p>Your partner in health and wellbeing.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p>Email: info@healthwellness.com</p>
+                <p>Phone: (123) 456-7890</p>
+                <div class="social-icons">
+                    <a href="#" class="social-icon">Facebook</a>
+                    <a href="#" class="social-icon">Twitter</a>
+                    <a href="#" class="social-icon">Instagram</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Health & Wellness. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="assets/script.js"></script>
+    <script src="assets/navbar.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Function to add item to cart
+            function addToCart(name, price, type) {
+                try {
+                    // Get existing cart or initialize new one
+                    let cart = [];
+                    const existingCart = localStorage.getItem('cartItems');
+                    if (existingCart) {
+                        cart = JSON.parse(existingCart);
+                    }
+
+                    // Add new item
+                    const newItem = {
+                        name: name,
+                        price: parseFloat(price),
+                        type: type
+                    };
+                    cart.push(newItem);
+
+                    // Save updated cart
+                    localStorage.setItem('cartItems', JSON.stringify(cart));
+                    console.log('Added to cart:', newItem);
+                    console.log('Current cart:', cart);
+
+                    return true;
+                } catch (error) {
+                    console.error('Error adding to cart:', error);
+                    return false;
+                }
+            }
+
+            // Handle book-now buttons
+            const bookNowButtons = document.querySelectorAll('.book-now');
+            bookNowButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const name = this.getAttribute('data-name');
+                    const price = this.getAttribute('data-price');
+                    
+                    if (addToCart(name, price, 'service')) {
+                        if (confirm(`${name} added to cart! View cart now?`)) {
+                            window.location.href = 'cart.html?tab=cart';
+                        }
+                    } else {
+                        alert('Error adding item to cart. Please try again.');
+                    }
+                });
+            });
+
+            // Handle select-package buttons
+            const selectPackageButtons = document.querySelectorAll('.select-package');
+            selectPackageButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const name = this.getAttribute('data-name');
+                    const price = this.getAttribute('data-price');
+                    
+                    if (addToCart(name, price, 'package')) {
+                        if (confirm(`${name} added to cart! View cart now?`)) {
+                            window.location.href = 'cart.html?tab=cart';
+                        }
+                    } else {
+                        alert('Error adding package to cart. Please try again.');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

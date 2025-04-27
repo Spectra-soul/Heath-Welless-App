@@ -1,0 +1,17 @@
+{
+  "name": "health-wellness-app",
+  "version": "1.0.0",
+  "description": "Health and Wellness Application with MERN Stack",
+  "main": "server.js",
+  "scripts": {
+    "start": "cd server && node server.js",
+    "dev": "cd server && nodemon server.js",
+    "install-server": "cd server && npm install"
+  },
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
+} 

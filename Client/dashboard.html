@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health & Wellness - Dashboard</title>
+    <link rel="stylesheet" href="assets/dashboard.css">
+    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="/images/logo.jpg" alt="Health & Wellness Logo"></a>
+            <h1>Health & Wellness</h1>
+        </div>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="dashboard.html" class="active btn-primary">Dashboard</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="page-banner">
+        <div class="banner-content">
+            <h2>User Dashboard</h2>
+            <p>Sign in to access your personalized wellness programs and track your progress.</p>
+        </div>
+    </section>
+
+    <section class="dashboard-section">
+        <div class="container">
+            <div class="dashboard-tabs">
+                <button class="tab-btn active" data-tab="login">Login</button>
+                <button class="tab-btn" data-tab="signup">Sign Up</button>
+            </div>
+
+            <div class="tab-content">
+                <div id="login" class="tab-pane active">
+                    <h2>Login to Your Account</h2>
+                    <form id="loginForm" class="auth-form">
+                        <div class="form-group">
+                            <label for="loginEmail">Email Address</label>
+                            <input type="email" id="loginEmail" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="loginPassword">Password</label>
+                            <input type="password" id="loginPassword" name="password" required>
+                        </div>
+                        
+                        <div class="form-group form-checkbox">
+                            <input type="checkbox" id="rememberMe" name="rememberMe">
+                            <label for="rememberMe">Remember me</label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <button type="submit" class="btn-primary btn-full">Login</button>
+                        </div>
+                        
+                        <!--div class="form-footer">
+                            <a href="#" class="forgot-password">Forgot Password?</a>
+                        </div-->
+                    </form>
+                </div>
+                
+                <div id="signup" class="tab-pane">
+                    <h2>Create an Account</h2>
+                    <form id="signupForm" class="auth-form">
+                        <div class="form-group">
+                            <label for="fullName">Full Name</label>
+                            <input type="text" id="fullName" name="fullName" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="signupEmail">Email Address</label>
+                            <input type="email" id="signupEmail" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="signupPassword">Password</label>
+                            <input type="password" id="signupPassword" name="password" required>
+                            <small class="form-hint">Password must be at least 8 characters long and include a number and a special character.</small>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="confirmPassword">Confirm Password</label>
+                            <input type="password" id="confirmPassword" name="confirmPassword" required>
+                        </div>
+                        
+                        <div class="form-group form-checkbox">
+                            <input type="checkbox" id="termsAgree" name="termsAgree" required>
+                            <label for="termsAgree">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
+                        </div>
+                        
+                        <div class="form-group">
+                            <button type="submit" class="btn-primary btn-full">Create Account</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="dashboard-features">
+        <div class="container">
+            <h2>Benefits of Creating an Account</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Track Your Progress</h3>
+                    <p>Monitor your wellness journey with personalized tracking tools and reports.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📅</div>
+                    <h3>Book Services</h3>
+                    <p>Easily schedule appointments for our wellness services.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <h3>Exclusive Offers</h3>
+                    <p>Access special discounts and promotions available only to registered users.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>Mobile Access</h3>
+                    <p>Access your wellness information anytime, anywhere from any device.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>Health & Wellness</h2>
+                <p>Your partner in health and wellbeing.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p>Email: info@healthwellness.com</p>
+                <p>Phone: (123) 456-7890</p>
+                <div class="social-icons">
+                    <a href="#" class="social-icon">Facebook</a>
+                    <a href="#" class="social-icon">Twitter</a>
+                    <a href="#" class="social-icon">Instagram</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Health & Wellness. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="assets/script.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Check if user is already logged in
+        const token = sessionStorage.getItem('token');
+        if (token) {
+            window.location.href = 'cart.html';
+            return;
+        }
+
+        const loginForm = document.getElementById('loginForm');
+        const signupForm = document.getElementById('signupForm');
+        const tabButtons = document.querySelectorAll('.tab-btn');
+        const tabPanes = document.querySelectorAll('.tab-pane');
+
+        // Tab switching functionality
+        tabButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const targetTab = this.getAttribute('data-tab');
+                
+                // Update active tab button
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+                
+                // Update active tab pane
+                tabPanes.forEach(pane => pane.classList.remove('active'));
+                document.getElementById(targetTab).classList.add('active');
+            });
+        });
+
+        // Handle login form submission
+        loginForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const email = document.getElementById('loginEmail').value;
+            const password = document.getElementById('loginPassword').value;
+
+            try {
+                const response = await fetch('/api/auth/login', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ email, password })
+                });
+
+                const data = await response.json();
+                console.log('Login response:', data);
+
+                if (response.ok) {
+                    // Store all necessary user information
+                    sessionStorage.setItem('token', data.token);
+                    sessionStorage.setItem('isLoggedIn', 'true');
+                    sessionStorage.setItem('userId', data.user.id);
+                    sessionStorage.setItem('userName', data.user.name);
+                    sessionStorage.setItem('userEmail', data.user.email);
+                    
+                    // Redirect to cart page
+                    window.location.href = 'cart.html';
+                } else {
+                    alert(data.msg || 'Login failed. Please check your credentials.');
+                }
+            } catch (error) {
+                console.error('Login error:', error);
+                alert('An error occurred during login. Please try again.');
+            }
+        });
+
+        // Handle signup form submission
+        signupForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const fullName = document.getElementById('fullName').value;
+            const email = document.getElementById('signupEmail').value;
+            const password = document.getElementById('signupPassword').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+
+            // Validate password match
+            if (password !== confirmPassword) {
+                alert('Passwords do not match');
+                return;
+            }
+
+            try {
+                const response = await fetch('/api/auth/register', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        name: fullName,
+                        email,
+                        password
+                    })
+                });
+
+                const data = await response.json();
+
+                if (data.success) {
+                    alert('Registration successful! Please login with your credentials.');
+                    // Switch to login tab
+                    document.querySelector('[data-tab="login"]').click();
+                } else {
+                    alert(data.msg || data.error || 'Registration failed. Please try again.');
+                }
+            } catch (error) {
+                console.error('Registration error:', error);
+                alert('An error occurred during registration. Please try again.');
+            }
+        });
+
+        // Check if user is already logged in
+        const isLoggedIn = sessionStorage.getItem('isLoggedIn');
+        if (isLoggedIn) {
+            window.location.href = 'cart.html';
+        }
+    });
+    </script>
+</body>
+</html>

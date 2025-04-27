@@ -1,0 +1,293 @@
+/* Advanced Dashboard Styles for Health & Wellness Website */
+
+/* Import the base styles and enhanced styles */
+@import url('styles.css');
+@import url('enhanced-styles.css');
+
+/* Additional Google Fonts for dashboard typography */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap');
+
+/* Font Awesome for icons */
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
+
+:root {
+    /* Dashboard-specific variables */
+    --dashboard-bg: rgba(255, 255, 255, 0.7);
+    --dashboard-card-bg: rgba(255, 255, 255, 0.9);
+    --dashboard-glass-effect: blur(15px);
+    --dashboard-border: 1px solid rgba(255, 255, 255, 0.4);
+    --dashboard-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    --dashboard-hover-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+    --dashboard-transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --dashboard-border-radius: 16px;
+    --dashboard-input-shadow: 0 0 0 4px rgba(76, 175, 80, 0.15);
+    --dashboard-success-glow: 0 0 20px rgba(76, 175, 80, 0.5);
+    --dashboard-pattern: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5z' fill='%234CAF50' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
+    --dashboard-gradient: linear-gradient(135deg, rgba(76, 175, 80, 0.08), rgba(33, 150, 243, 0.08));
+    --dashboard-accent-gradient: linear-gradient(135deg, #4CAF50, #2196F3);
+    --dashboard-text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Enhanced Body Styling for Dashboard */
+body {
+    background-image: 
+        var(--dashboard-pattern),
+        radial-gradient(circle at 10% 20%, rgba(76, 175, 80, 0.08) 0%, transparent 30%),
+        radial-gradient(circle at 90% 80%, rgba(33, 150, 243, 0.08) 0%, transparent 30%);
+    background-attachment: fixed;
+    font-family: 'Inter', var(--font-primary);
+}
+
+/* Advanced Glass Morphism for Dashboard Sections */
+.dashboard-section {
+    position: relative;
+    padding: 6rem 0;
+    overflow: hidden;
+}
+
+.dashboard-section::before,
+.dashboard-section::after {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    z-index: 0;
+}
+
+.dashboard-section::before {
+    top: -100px;
+    right: -100px;
+    background: radial-gradient(circle, rgba(76, 175, 80, 0.15) 0%, transparent 70%);
+    animation: float 20s infinite alternate cubic-bezier(0.45, 0.05, 0.55, 0.95);
+}
+
+.dashboard-section::after {
+    bottom: -100px;
+    left: -100px;
+    background: radial-gradient(circle, rgba(33, 150, 243, 0.15) 0%, transparent 70%);
+    animation: float 20s infinite alternate-reverse cubic-bezier(0.45, 0.05, 0.55, 0.95);
+}
+
+/* Enhanced Page Banner with Parallax Effect */
+.page-banner {
+    background: var(--dashboard-accent-gradient);
+    padding: 10rem 0 6rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.page-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23FFFFFF' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    opacity: 0.3;
+    transform: translateZ(0);
+}
+
+.banner-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-lg);
+    animation: fadeInUp 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.banner-content h2 {
+    color: white;
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: var(--spacing-md);
+    text-shadow: var(--dashboard-text-shadow);
+    letter-spacing: 1px;
+    transform: translateZ(0);
+}
+
+.banner-content p {
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 1.25rem;
+    max-width: 600px;
+    margin: 0 auto;
+    text-shadow: var(--dashboard-text-shadow);
+    font-weight: 300;
+    line-height: 1.8;
+}
+
+/* Advanced Tab Styling with Animated Indicator */
+.dashboard-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.dashboard-tabs::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(76, 175, 80, 0.3), transparent);
+}
+
+.tab-btn {
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border: none;
+    background: none;
+    color: var(--text-light);
+    cursor: pointer;
+    transition: var(--dashboard-transition);
+    position: relative;
+    overflow: hidden;
+    font-family: 'Manrope', var(--font-primary);
+    letter-spacing: 0.5px;
+}
+
+.tab-btn::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--dashboard-accent-gradient);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+    border-radius: 3px;
+}
+
+.tab-btn.active {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.tab-btn.active::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.tab-btn:hover:not(.active) {
+    color: var(--primary-dark);
+}
+
+.tab-btn:hover:not(.active)::before {
+    transform: scaleX(0.3);
+}
+
+/* Advanced Glass Card Styling for Tab Content */
+.tab-content {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 3rem;
+    background: var(--dashboard-card-bg);
+    border-radius: var(--dashboard-border-radius);
+    box-shadow: var(--dashboard-shadow);
+    backdrop-filter: var(--dashboard-glass-effect);
+    -webkit-backdrop-filter: var(--dashboard-glass-effect);
+    border: var(--dashboard-border);
+    position: relative;
+    z-index: 10;
+    transition: var(--dashboard-transition);
+    overflow: hidden;
+}
+
+.tab-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--dashboard-gradient);
+    z-index: -1;
+    opacity: 0.5;
+}
+
+.tab-content:hover {
+    box-shadow: var(--dashboard-hover-shadow);
+    transform: translateY(-5px);
+}
+
+.tab-pane {
+    display: none;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s cubic-bezier(0.19, 1, 0.22, 1), transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.tab-pane.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+    animation: fadeIn 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.tab-pane h2 {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    color: var(--primary-dark);
+    font-weight: 700;
+    font-size: 2rem;
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.tab-pane h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--dashboard-accent-gradient);
+    border-radius: 3px;
+}
+
+/* Advanced Form Styling */
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.form-group {
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.7rem;
+    color: var(--text-color);
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 1rem 1.2rem;
+    border: 2px solid rgba(0, 0, 0, 0.08);
+    border-radius: var(--dashboard-border-radius);
+    font-size: 1rem;
+    transition: var(--dashboard-transition);
+    background-color: rgba(255, 255, 255, 0.7);
+    font-family: 'Inter', var(--font-primary);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+}
+
+.form-group input:focus {
+    border-color: var(

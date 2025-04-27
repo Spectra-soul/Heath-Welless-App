@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health & Wellness - Contact Us</title>
+    <link rel="stylesheet" href="assets/contact.css">
+    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><img src="/images/logo.jpg" alt="Health & Wellness Logo"></a>
+            <h1>Health & Wellness</h1>
+        </div>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="dashboard.html" class="btn-primary">Dashboard</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="page-banner">
+        <div class="banner-content">
+            <h2>Contact Us</h2>
+            <p>Get in touch with our team for inquiries or to schedule a consultation.</p>
+        </div>
+    </section>
+
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2>Get In Touch</h2>
+                    <p>We're here to answer any questions you may have about our services or to help you schedule an appointment.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <div class="contact-text">
+                                <h3>Address</h3>
+                                <p>123 Wellness Avenue<br>Health District, City 12345</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">📞</div>
+                            <div class="contact-text">
+                                <h3>Phone</h3>
+                                <p>(123) 456-7890</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">✉️</div>
+                            <div class="contact-text">
+                                <h3>Email</h3>
+                                <p>info@healthwellness.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">🕒</div>
+                            <div class="contact-text">
+                                <h3>Hours</h3>
+                                <p>Monday - Friday: 8am - 8pm<br>Saturday: 9am - 5pm<br>Sunday: Closed</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="social-media">
+                        <h3>Follow Us</h3>
+                        <div class="social-icons">
+                            <a href="#" class="social-icon">Facebook</a>
+                            <a href="#" class="social-icon">Twitter</a>
+                            <a href="#" class="social-icon">Instagram</a>
+                            <a href="#" class="social-icon">LinkedIn</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h2>Send Us a Message</h2>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <select id="subject" name="subject" required>
+                                <option value="" disabled selected>Select a subject</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="services">Services Information</option>
+                                <option value="appointment">Schedule Appointment</option>
+                                <option value="feedback">Feedback</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <button type="submit" class="btn-primary">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="map-section">
+        <div class="container">
+            <h2>Find Us</h2>
+            <div class="map-container">
+                <!-- Placeholder for map -->
+                <div class="map-placeholder">
+                    <p>Interactive Map Will Be Displayed Here</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-section">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>How do I schedule an appointment?</h3>
+                    <p>You can schedule an appointment by filling out our contact form, calling us directly, or using our online booking system in the dashboard.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Do you accept insurance?</h3>
+                    <p>We accept various insurance plans for certain services. Please contact us with your insurance details for verification.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What should I bring to my first appointment?</h3>
+                    <p>Please bring your ID, insurance card (if applicable), and any relevant medical records or information about your health history.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Can I cancel or reschedule my appointment?</h3>
+                    <p>Yes, you can cancel or reschedule your appointment with at least 24 hours notice without any cancellation fee.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <h2>Ready to Start Your Wellness Journey?</h2>
+        <p>Join our community and get access to personalized wellness programs.</p>
+        <a href="dashboard.html" class="btn-primary">Sign Up Now</a>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>Health & Wellness</h2>
+                <p>Your partner in health and wellbeing.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p>Email: info@healthwellness.com</p>
+                <p>Phone: (123) 456-7890</p>
+                <div class="social-icons">
+                    <a href="#" class="social-icon">Facebook</a>
+                    <a href="#" class="social-icon">Twitter</a>
+                    <a href="#" class="social-icon">Instagram</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Health & Wellness. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="assets/script.js"></script>
+</body>
+</html>
