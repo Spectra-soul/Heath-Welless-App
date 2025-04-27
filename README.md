@@ -162,7 +162,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## 📧 Contact
 
-Project Link: [https://github.com/yourusername/health-wellness-app](https://github.com/Spectra-soul/health-wellness-app)
+Project Link: [https://github.com/Spectra-soul/health-wellness-app](https://github.com/Spectra-soul/health-wellness-app)
 
 ---
 
